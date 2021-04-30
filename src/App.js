@@ -1,5 +1,4 @@
-// import React, { Component } from "react";
-import GetPrice from "./components/getPrice";
+import GetPrice from "./app/getPrice";
 import "./styles/app.scss";
 
 function App() {
