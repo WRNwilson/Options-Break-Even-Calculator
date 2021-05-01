@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Options-Break-Even-Calculator/static/css/main.f2679ebc.chunk.css",
+    "main.js": "/Options-Break-Even-Calculator/static/js/main.18ea9ab7.chunk.js",
+    "main.js.map": "/Options-Break-Even-Calculator/static/js/main.18ea9ab7.chunk.js.map",
+    "runtime-main.js": "/Options-Break-Even-Calculator/static/js/runtime-main.9974f573.js",
+    "runtime-main.js.map": "/Options-Break-Even-Calculator/static/js/runtime-main.9974f573.js.map",
+    "static/js/2.39dff5f9.chunk.js": "/Options-Break-Even-Calculator/static/js/2.39dff5f9.chunk.js",
+    "static/js/2.39dff5f9.chunk.js.map": "/Options-Break-Even-Calculator/static/js/2.39dff5f9.chunk.js.map",
+    "index.html": "/Options-Break-Even-Calculator/index.html",
+    "static/css/main.f2679ebc.chunk.css.map": "/Options-Break-Even-Calculator/static/css/main.f2679ebc.chunk.css.map",
+    "static/js/2.39dff5f9.chunk.js.LICENSE.txt": "/Options-Break-Even-Calculator/static/js/2.39dff5f9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9974f573.js",
+    "static/js/2.39dff5f9.chunk.js",
+    "static/css/main.f2679ebc.chunk.css",
+    "static/js/main.18ea9ab7.chunk.js"
+  ]
+}
