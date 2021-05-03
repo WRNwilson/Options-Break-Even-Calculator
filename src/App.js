@@ -39,40 +39,30 @@ function App() {
 
           <div className="side">
             <label className="inputLabel"> Side </label>
-            <input
-              className="radio-1"
-              type="radio"
-              name="gender"
-              value="male"
-            />
-            <label>Buy </label>
 
-            <input
-              className="radio-1"
-              type="radio"
-              name="gender"
-              value="male"
-            />
-            <label>Sell </label>
+            <div className="radio-item">
+              <input className="radio-1" type="radio" />
+              <label>Buy </label>
+            </div>
+
+            <div className="radio-item">
+              <input className="radio-1" type="radio" />
+              <label>Sell </label>
+            </div>
           </div>
 
           <div className="type">
             <label className="inputLabel"> Type </label>
-            <input
-              className="radio-2"
-              type="radio"
-              name="gender"
-              value="male"
-            />
-            <label>Call </label>
 
-            <input
-              className="radio-2"
-              type="radio"
-              name="gender"
-              value="male"
-            />
-            <label>Put </label>
+            <div className="radio-item">
+              <input className="radio-2" type="radio" />
+              <label>Call </label>
+            </div>
+
+            <div className="radio-item">
+              <input className="radio-2" type="radio" />
+              <label>Put </label>
+            </div>
           </div>
 
           <div className="quantity">
@@ -84,7 +74,7 @@ function App() {
         <div className="strike-expiry">
           <div>
             <label className="inputLabel"> Strike Price</label>
-            <input className="form" type="form" placeholder="80" />
+            <input className="form" type="form" placeholder="79.98" />
           </div>
 
           <div>

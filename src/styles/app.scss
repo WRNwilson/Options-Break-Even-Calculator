@@ -1,11 +1,10 @@
 body {
-  // position: absolute;
-  background-image: linear-gradient(hsl(200,7%,15%), hsl(207,7%,29%));
+  background-image: linear-gradient(hsl(200, 7%, 15%), hsl(207, 7%, 29%));
   font-family: "Hind Siliguri", sans-serif;
 }
 
 .inputLabel {
-  font-size: 20px;
+  font-size: 25px;
   color: rgb(255, 255, 255);
   display: block;
 }
@@ -16,20 +15,6 @@ body {
   width: 16%;
   height: 2em;
 }
-
-// input[type='radio']:checked:after {
-//   width: 15px;
-//   height: 15px;
-//   border-radius: 15px;
-//   top: -2px;
-//   left: -1px;
-//   position: relative;
-//   background-color: #ffa500;
-//   content: '';
-//   display: inline-block;
-//   visibility: visible;
-//   border: 2px solid white;
-// }
 
 .h1 {
   font-size: 60px;
@@ -45,7 +30,7 @@ body {
   color: rgb(255, 255, 255);
 }
 
-p {
+.p {
   font-size: 33px;
   text-align: center;
   padding: 5px;
@@ -77,14 +62,12 @@ p {
   margin-top: 50px;
 }
 
-.side{
-  color: #ffffff;
+.side {
   margin-left: 50px;
   margin-right: 40px;
 }
 
 .type {
-  color: #ffffff;
   margin-right: 50px;
 }
 
@@ -98,7 +81,7 @@ p {
   display: inline-block;
   font-size: 25px;
   transition-duration: 0.2s;
-  box-shadow: 0 2px 2px hsl(204, 100%, 50%);
+  box-shadow: 0 1px 1px hsl(204, 100%, 50%);
 }
 
 .button:hover {
@@ -129,47 +112,22 @@ p {
   border-radius: 13px;
   font-weight: bold;
   color: hsl(204, 100%, 50%);
-  position: fixed;
   text-align: center;
   display: inline-block;
   font-size: 25px;
   transition-duration: 0.2s;
-  box-shadow: 0 2px 2px hsl(204, 100%, 50%);
+  box-shadow: 0 1px 1px hsl(204, 100%, 50%);
 }
-
-// .buyOrWrite {
-//   background-color: #f3aa66;
-//   color: white;
-//   padding-bottom: 0px;
-//   width: 90px;
-//   height: 25px;
-//   border-radius: 3px;
-//   font-size: 20px;
-//   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.9);
-// }
-
-// .callOrPut {
-//   background: #f3aa66;
-//   color: white;
-//   padding-bottom: 0px;
-//   width: 90px;
-//   height: 25px;
-//   border-radius: 3px;
-//   font-size: 20px;
-//   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.9);
-// }
 
 .form {
   width: 200px;
   height: 40px;
   margin-top: 10px;
-  background-color: #ffffff59;
+  background-color: #ffffff11;
   border-radius: 13px;
+  color: #ffffff;
+  font-size: x-large;
 }
-
-// .placeholder {
-// color: white;
-// }
 
 .date_form {
   text-align: center;
@@ -180,4 +138,45 @@ p {
   height: 35px;
   background-color: rgba(0, 153, 255, 0.733);
   border-radius: 13px;
+}
+
+.radio-item {
+  display: inline-block;
+  position: relative;
+  padding: 0 6px;
+  margin: 10px 0 0;
+}
+
+.radio-item input[type="radio"] {
+  display: none;
+}
+
+.radio-item label {
+  color: rgb(255, 255, 255);
+  font-weight: normal;
+}
+
+.radio-item label:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0 5px 0 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 11px;
+  border: 2px solid hsl(204, 100%, 50%);
+  background-color: transparent;
+}
+
+.radio-item input[type="radio"]:checked + label:after {
+  border-radius: 11px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  content: " ";
+  display: block;
+  background: hsl(204, 100%, 50%);
 }
