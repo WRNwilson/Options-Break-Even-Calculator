@@ -2,68 +2,101 @@ import GetPrice from "./app/getPrice";
 import "./styles/app.scss";
 
 function App() {
-  
   return (
-    <div className="underlying">
-      <h1 className="h1">Break Even Calculator</h1>
-      <p className="p">
-        In options trading, the break-even is the price in the underlying at
-        which one can choose to exercise the contract without incurring a loss
-        (the level in an underlying security when it covers an option's
-        premium).
-      </p>
-      <h3 className="h3">Underlying</h3>
-      <span>
-        <label className="inputLabel"> Symbol: </label>
-        <input className="form" type="form" placeholder="AMD" />
-        <label className="inputLabel"> Stock Price: </label>
-        <input className="form" type="form" placeholder="81.15" />
+    <div className="calc">
+      <div>
+        <h1 className="h1">Break Even Calculator</h1>
+        <p className="p">
+          In options trading, the break-even is the price in the underlying at
+          which one can choose to exercise the contract without incurring a loss
+          (the level in an underlying security when it covers an option's
+          premium).
+        </p>
+      </div>
+
+      <h3 className="h3">Select Underlying</h3>
+      <div className="underlying">
+        <div>
+          <label className="inputLabel"> Symbol </label>
+          <input className="form" type="text" placeholder="AMD" />
+        </div>
+        <div>
+          <label className="inputLabel"> Stock Price </label>
+          <input className="form" type="text" placeholder="81.15" />
+        </div>
+
         <button className="button" type="button">
-          Get Price
+          Find Price
         </button>
-      </span>
+      </div>
 
+      <h3 className="h3">Select Option</h3>
       <div className="option">
-        <h3 className="h3">
-          Option
+        <form class="form-container">
           <button className="button" type="button">
-            Choose Option
+            Find Option
           </button>
-        </h3>
-        <span>
-          <label className="inputLabel"> Buy or Write: </label>
-          <select name="option-act" className="buyOrWrite">
-            <option value="buy" selected="">
-              Buy
-            </option>
-            <option value="sell">Write</option>
-          </select>
-          <label className="inputLabel"> Call or Put: </label>
-          <select name="option-act" className="callOrPut">
-            <option value="call" selected="">
-              Call
-            </option>
-            <option value="put">Put</option>
-          </select>
-          <label className="inputLabel"> Premium: </label>
-          <input className="form" type="form" placeholder="7.13" />
-          <label className="inputLabel"> Number of Contracts: </label>
 
-          <input className="form" type="form" placeholder="20" />
-          <label className="inputLabel"> x 100 </label>
-          <br />
-          <br />
-        </span>
-        <span>
-          <label className="inputLabel">Date of Expiration: </label>
-          <input className="date_form" type="date" />
-          <label className="inputLabel"> Strike Price: $</label>
-          <input className="form" type="form" placeholder="80" />
-          <label className="inputLabel"> IV (implied volatility): </label>
-          <input className="form" type="form" placeholder="45.723" />
-        </span>
-        <br />
-        <br />
+          <div className="side">
+            <label className="inputLabel"> Side </label>
+            <input
+              className="radio-1"
+              type="radio"
+              name="gender"
+              value="male"
+            />
+            <label>Buy </label>
+
+            <input
+              className="radio-1"
+              type="radio"
+              name="gender"
+              value="male"
+            />
+            <label>Sell </label>
+          </div>
+
+          <div className="type">
+            <label className="inputLabel"> Type </label>
+            <input
+              className="radio-2"
+              type="radio"
+              name="gender"
+              value="male"
+            />
+            <label>Call </label>
+
+            <input
+              className="radio-2"
+              type="radio"
+              name="gender"
+              value="male"
+            />
+            <label>Put </label>
+          </div>
+
+          <div className="quantity">
+            <label className="inputLabel"> Quantity </label>
+            <input className="form" type="text" placeholder="32" />
+          </div>
+        </form>
+
+        <div className="strike-expiry">
+          <div>
+            <label className="inputLabel"> Strike Price</label>
+            <input className="form" type="form" placeholder="80" />
+          </div>
+
+          <div>
+            <label className="inputLabel">Date of Expiration</label>
+            <input className="date_form" type="date" />
+          </div>
+
+          {/* <label className="inputLabel"> IV (implied volatility): </label>
+          <input className="form" type="form" placeholder="45.723" /> */}
+        </div>
+      </div>
+      <div>
         <button className="calculate_button" type="button">
           Calculate
         </button>
