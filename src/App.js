@@ -1,4 +1,4 @@
-import GetPrice from "./app/getPrice";
+import GetPrice from "./app/findPrice";
 import "./styles/app.scss";
 
 function App() {
@@ -72,6 +72,11 @@ function App() {
         </form>
 
         <div className="strike-expiry">
+          <div>
+            <label className="inputLabel">Price per option</label>
+            <input className="form" type="form" placeholder="25.48" />
+          </div>
+
           <div>
             <label className="inputLabel"> Strike Price</label>
             <input className="form" type="form" placeholder="79.98" />
