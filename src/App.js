@@ -1,7 +1,12 @@
+import React, { useState } from "react";
 import "./styles/app.scss";
-import Calculate from "./app/calculate.js";
+import Calculate from "./app/calculate";
+import SelectUnderlying from "./app/selectUnderlying";
+import SelectOption from "./app/selectOption";
 
 function App() {
+  const [price, setPrice] = useState("");
+
   return (
     <div className="calc">
       <div>
@@ -15,22 +20,10 @@ function App() {
       </div>
 
       <h3 className="h3">Select Underlying</h3>
-      <div className="underlying">
-        <div>
-          <label className="inputLabel"> Symbol </label>
-          <input className="form" type="text" placeholder="AMD" />
-        </div>
-        <div>
-          <label className="inputLabel"> Stock Price </label>
-          <input className="form" type="text" placeholder="81.15" />
-        </div>
-
-        <button className="button" type="button">
-          Find Price
-        </button>
-      </div>
+      <SelectUnderlying />
 
       <h3 className="h3">Select Option</h3>
+      <SelectOption />
 
       <Calculate />
     </div>
