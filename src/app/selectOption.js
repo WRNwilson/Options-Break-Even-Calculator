@@ -1,41 +1,36 @@
 import React, { Component } from "react";
 
 class SelectOption extends Component {
-  //   constructor(props) {
-  //     super(props);
+  constructor(props) {
+    super(props);
 
-  //     this.state = {
-  //       value: "",
-  //       side: "",
-  //       type: "",
-  //     };
-  //     this.onValueChange = this.onValueChange.bind(this);
-  //   }
-
-  //   getValue = (event) => {
-  //     const name = event.target.name;
-  //     const value = event.target.value;
-
-  //     this.setState({ [name]: value });
-  //   };
-
-  //   clickHandler = (event) => {
-  //     event.preventDefault(); // stop reloading
-  //     const side = this.state.side;
-  //     const type = this.state.type;
-
-  //     console.log("symbol on submit: ", side);
-  //     console.log("price on submit: ", type);
-  //     //TODO
-  //   };
-
-  constructor() {
-    super();
     this.state = {
-      name: "React",
+      value: "",
+      side: "",
+      type: "",
+      quantity: "",
+      premium: "",
+      strikeP: "",
     };
     this.onValueChange = this.onValueChange.bind(this);
     // this.formSubmit = this.formSubmit.bind(this);
+  }
+
+  getValue = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+
+    this.setState({ [name]: value });
+  };
+
+  clickHandler(event) {
+    event.preventDefault(); // stop reloading
+    const side = this.state.side;
+    const type = this.state.type;
+
+    console.log("symbol on submit: ", side);
+    console.log("price on submit: ", type);
+    //TODO
   }
 
   onValueChange(event) {
@@ -51,6 +46,8 @@ class SelectOption extends Component {
   //   }
 
   render() {
+    console.log("State: ", this.state);
+
     return (
       <div className="option">
         <form className="form-container">
@@ -117,19 +114,40 @@ class SelectOption extends Component {
 
           <div className="quantity">
             <label className="inputLabel"> Quantity </label>
-            <input className="form" type="number" placeholder="32" />
+            <input
+              className="form"
+              type="number"
+              placeholder="32"
+              onChange={this.getValue}
+              name="quantity"
+              value={this.state.quantity}
+            />
           </div>
         </form>
 
         <div className="strike-expiry">
           <div>
             <label className="inputLabel">Premium</label>
-            <input className="form" type="number" placeholder="25.48" />
+            <input
+              className="form"
+              type="number"
+              placeholder="25.48"
+              onChange={this.getValue}
+              name="premium"
+              value={this.state.premium}
+            />
           </div>
 
           <div>
             <label className="inputLabel"> Strike Price</label>
-            <input className="form" type="number" placeholder="79.98" />
+            <input
+              className="form"
+              type="number"
+              placeholder="79.98"
+              onChange={this.getValue}
+              name="strikeP"
+              value={this.state.strikeP}
+            />
           </div>
 
           <div>
